@@ -1,28 +1,113 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app>
+    <v-navigation-drawer dark fixed v-model="sideNav">
+      <v-list>
+        <v-list-item-group>
+          <v-list-item
+            v-for="item in menuItems"
+            :key="item.title"
+            :to="item.link"
+          >
+            <v-list-item-title>
+              <!-- <v-icon class="pr-2">{{ item.icon }}</v-icon -->
+              {{ item.title }}</v-list-item-title
+            >
+          </v-list-item>
+          <v-list-item @click="onLogout" v-if="isUserAuthenticated">
+            <v-list-item-title> Logout</v-list-item-title>
+          </v-list-item>
+        </v-list-item-group>
+      </v-list>
+    </v-navigation-drawer>
+
+    <v-toolbar color="black" flat class="pm-header">
+      <v-app-bar-nav-icon
+        class="hidden-sm-and-up"
+        @click.stop="sideNav = !sideNav"
+      ></v-app-bar-nav-icon>
+
+      <v-toolbar-title
+        ><router-link to="/" style="cursor: pointer">
+          <v-icon dark class="pr-2">fa-paw</v-icon>Pets Meet-up</router-link
+        >
+      </v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-toolbar-items class="hidden-xs-only">
+        <v-btn
+          v-for="item in menuItems"
+          :key="item.title"
+          :to="item.link"
+          text
+          color="orange"
+        >
+          <!-- <v-icon class="pr-2">{{ item.icon }}</v-icon> -->
+          {{ item.title }}
+        </v-btn>
+        <v-btn @click="onLogout" v-if="isUserAuthenticated" text color="orange">
+          <!-- <v-icon class="pr-2">fa-paw</v-icon> -->
+          Logout
+        </v-btn>
+      </v-toolbar-items>
+    </v-toolbar>
+
+    <main>
+      <router-view> </router-view>
+    </main>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  name: "App",
+  data() {
+    return {
+      sideNav: false,
+    };
+  },
+  computed: {
+    menuItems() {
+      let menuItems = [
+        { icon: "fa-paw", title: "Sign up", link: "/signup" },
+        { icon: "fa-paw", title: "Sign in", link: "/signin" },
+      ];
+      if (this.isUserAuthenticated) {
+        menuItems = [
+          // { icon: "fa-paw", title: "Profile", link: "/profile" },
+          { icon: "fa-paw", title: "Upcoming Meetups", link: "/meetups" },
+          { icon: "fa-paw", title: "Organize Meetups", link: "/meetup/new" },
+        ];
+      }
+      return menuItems;
+    },
+
+    isUserAuthenticated() {
+      return (
+        this.$store.getters.user !== null &&
+        this.$store.getters.user !== undefined
+      );
+    },
+  },
+  methods: {
+    onLogout() {
+      this.$store.dispatch("logout");
+    },
+  },
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style >
+/* .pm-header { */
+/* height: 10px !important;
+} */
+.v-application--wrap {
+  min-height: auto !important;
+}
+body {
+  padding: 10px;
+  background-color: rgb(20, 20, 20);
+}
+a {
+  text-decoration: none !important;
+  color: #fff !important;
 }
 </style>
