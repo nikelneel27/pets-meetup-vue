@@ -468,13 +468,13 @@ i.v-icon.notranslate.fas.fa-chevron-right.theme--dark {
 }
 @media only screen and (min-width: 1000px) and (max-width: 1400px) {
   .section-image-meetup img[data-v-2667747e] {
-    max-width: 450px;
+    max-width: 570px;
   }
   .carousel {
-    max-width: 500px;
+    max-width: 700px;
   }
   .nav-explore-more {
-    right: 6px;
+    right: 70px;
   }
 }
 @media (min-width: 1440px) {
