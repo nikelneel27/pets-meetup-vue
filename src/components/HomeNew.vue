@@ -13,7 +13,7 @@
       <p>fur friends.</p>
     </div>
     <section class="section">
-      <div class="section-image">
+      <div class="section-image-meetup">
         <img
           src="https://image.freepik.com/free-vector/illustration-concept-with-people-with-pets_52683-30880.jpg"
           alt=""
@@ -50,7 +50,7 @@
             ></v-progress-circular>
           </v-flex>
         </v-layout>
-        <v-layout row wrap>
+        <v-layout justify="center" row wrap>
           <v-flex xs12>
             <v-carousel
               outlined
@@ -234,7 +234,7 @@ export default {
   padding-bottom: 120px;
   padding-top: 50px;
 }
-.section-image {
+.section-image-meetup {
   position: absolute;
   top: 755px;
   left: 560px;
@@ -302,6 +302,7 @@ export default {
   font-size: 2rem;
   color: #000;
   font-weight: 700;
+  margin-top: 10px !important;
 }
 .nav-explore-more p {
   font-size: 16px;
@@ -310,7 +311,6 @@ export default {
   text-align: left;
   padding-left: 0;
   font-weight: 300;
-  /* padding-top: -40px !important; */
 }
 
 .nav-explore-more .v-icon {
@@ -345,7 +345,11 @@ i.v-icon.notranslate.fas.fa-chevron-right.theme--dark {
   }
   .top-banner-right img {
     max-width: 300px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
+    margin: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
   }
   .overlap-img {
     display: none;
@@ -365,6 +369,19 @@ i.v-icon.notranslate.fas.fa-chevron-right.theme--dark {
     font-size: 12px;
     padding: 50px 12px 80px 12px;
   }
+
+  .section-image-meetup {
+    top: 830px;
+
+    margin: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 1;
+  }
+  .section-image-meetup img {
+    max-width: 300px;
+  }
   .pm-meetups-heading p {
     text-align: center;
     font-size: 2.5rem;
@@ -374,7 +391,7 @@ i.v-icon.notranslate.fas.fa-chevron-right.theme--dark {
     font-weight: 700;
   }
   .pm-meetups-heading p:nth-child(1) {
-    margin-top: 40px;
+    margin-top: 150px;
   }
   .carousel {
     margin-bottom: 280px;
@@ -385,7 +402,7 @@ i.v-icon.notranslate.fas.fa-chevron-right.theme--dark {
     background-size: contain !important;
   }
   .nav-explore-more {
-    top: 1550px;
+    top: 1685px;
     right: auto;
     left: auto;
     /* padding: 10px; */
@@ -424,6 +441,56 @@ i.v-icon.notranslate.fas.fa-chevron-right.theme--dark {
   .footer div:nth-child(3) p {
     font-size: 12px;
     font-weight: 300;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 1000px) {
+  .top-banner-right img {
+    max-width: 600px;
+  }
+  .section-image-meetup img {
+    max-width: 450px;
+  }
+  .section-image-meetup {
+    top: 1008px;
+  }
+  .pm-meetups-heading p:nth-child(1) {
+    margin-top: 275px;
+  }
+  .nav-explore-more {
+    top: 1960px;
+    margin: auto;
+    text-align: center;
+  }
+  .home {
+    display: flex;
+    align-items: center;
+  }
+}
+@media only screen and (min-width: 1000px) and (max-width: 1400px) {
+  .section-image-meetup img[data-v-2667747e] {
+    max-width: 450px;
+  }
+  .carousel {
+    max-width: 500px;
+  }
+  .nav-explore-more {
+    right: 6px;
+  }
+}
+@media (min-width: 1440px) {
+  .overlap-img {
+    top: 355px;
+    left: 110px;
+  }
+  .section-image-meetup[data-v-2667747e] {
+    top: 810px;
+    left: 630px;
+  }
+  .carousel {
+    max-width: 800px;
+  }
+  .nav-explore-more {
+    right: 40px;
   }
 }
 </style>
