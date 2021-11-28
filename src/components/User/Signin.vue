@@ -125,7 +125,7 @@ export default {
 }
 @media (max-width: 768px) {
   .pm-signin-img {
-    max-width: 290px;
+    max-width: 300px;
   }
 }
 </style>
