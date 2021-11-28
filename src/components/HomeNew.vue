@@ -87,6 +87,8 @@
                       }}</v-list-item-title>
                       <v-list-item-subtitle class="carousel-list-item-subtitle">
                         <strong>Time : </strong> {{ meetup.date }}
+                      </v-list-item-subtitle>
+                      <v-list-item-subtitle class="carousel-list-item-subtitle">
                         <strong>Location :</strong>
                         {{ meetup.location }}</v-list-item-subtitle
                       >

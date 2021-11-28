@@ -141,7 +141,7 @@ export default {
 }
 @media (max-width: 768px) {
   .pm-signup-img {
-    max-width: 300px;
+    max-width: 320px;
   }
 }
 </style>
