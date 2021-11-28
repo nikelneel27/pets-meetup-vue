@@ -66,6 +66,21 @@
           <v-layout>
             <v-flex xs12>
               <v-img
+                class="white--text align-end sponser-img"
+                src="https://upload.wikimedia.org/wikipedia/en/a/a7/Hill%27s_Science_Diet_logo.jpg"
+                height="70px"
+              >
+                <!-- <v-card-title>Royal Canin</v-card-title> -->
+              </v-img>
+            </v-flex>
+          </v-layout></v-container
+        >
+      </v-card>
+      <v-card class="sponser-card">
+        <v-container>
+          <v-layout>
+            <v-flex xs12>
+              <v-img
                 class="white--text sponser-img"
                 src="http://petgallerypaphos.com/wp-content/uploads/2021/04/6-1.png"
                 height="70px"
@@ -110,9 +125,9 @@ export default {};
   margin-left: 20px;
   color: #fff;
 }
-@media (max-width: 768px) {
-  /* .sponser-card-main {
-    flex: 1;
-  } */
+@media (max-width: 900px) {
+  .sponser-card-main {
+    flex-wrap: wrap;
+  }
 }
 </style>

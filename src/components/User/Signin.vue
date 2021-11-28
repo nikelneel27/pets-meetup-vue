@@ -6,9 +6,9 @@
           <v-row>
             <v-col md="6" sm="12">
               <v-img
-                class="pm-signup-img"
-                src="https://image.freepik.com/free-vector/cat-elegant-tie_71593-692.jpg"
-                height="500px"
+                class="pm-signin-img"
+                src="https://image.freepik.com/free-vector/dog-walking-concept-illustration_114360-3169.jpg"
+                min-height="270px"
               >
               </v-img>
             </v-col>
@@ -22,7 +22,6 @@
                 <v-layout>
                   <v-flex>
                     <v-text-field
-                      dark
                       label="E-mail"
                       outlined
                       id="name"
@@ -34,7 +33,6 @@
                 <v-layout>
                   <v-flex>
                     <v-text-field
-                      dark
                       type="password"
                       label="Password"
                       outlined
@@ -47,14 +45,15 @@
 
                 <v-layout
                   ><v-flex>
-                    <v-btn type="submit" class="red white--text mb-2"
+                    <v-btn type="submit" class="red white--text mb-5"
                       >Sign In</v-btn
                     >
                   </v-flex></v-layout
                 >
 
                 <p>
-                  Not registered yet, <a @click="navToSignUp">Sign up</a> now .
+                  New Customer ,
+                  <a class="link" @click="navToSignUp">Sign up</a> now .
                 </p>
               </form>
             </v-col>
@@ -101,14 +100,32 @@ export default {
 
 <style scoped>
 .signin {
-  background-color: rgb(20, 20, 20);
-  color: #fff;
+  background-color: #fff;
+  color: #000;
 }
-.pm-signup-img {
+.pm-signin-img {
   width: 100%;
   max-width: 500px;
+  margin: 0 auto;
 }
 .pm-signup-title {
   font-weight: 500;
+}
+.s-button {
+  margin-bottom: 30px;
+}
+.link {
+  text-decoration: none;
+  color: rgb(212, 41, 184) !important;
+}
+@media (min-width: 768px) {
+  .signin {
+    padding: 80px;
+  }
+}
+@media (max-width: 768px) {
+  .pm-signin-img {
+    max-width: 290px;
+  }
 }
 </style>

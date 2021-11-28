@@ -7,8 +7,8 @@
             <v-col md="6" sm="12">
               <v-img
                 class="pm-signup-img"
-                src="https://image.freepik.com/free-vector/small-puppy-holding-toy-bear-his-teeth-cartoon_1284-63256.jpg"
-                height="500px"
+                src="https://image.freepik.com/free-vector/animal-shelter-concept-illustration_114360-2876.jpg"
+                min-height="270px"
               >
               </v-img>
             </v-col>
@@ -23,7 +23,6 @@
                 <v-layout>
                   <v-flex>
                     <v-text-field
-                      dark
                       label="E-mail"
                       outlined
                       id="email"
@@ -35,7 +34,6 @@
                 <v-layout>
                   <v-flex>
                     <v-text-field
-                      dark
                       type="password"
                       label="Password"
                       outlined
@@ -48,7 +46,6 @@
                 <v-layout>
                   <v-flex>
                     <v-text-field
-                      dark
                       type="text"
                       label="Confirm Password"
                       outlined
@@ -61,13 +58,15 @@
                 </v-layout>
                 <v-layout
                   ><v-flex>
-                    <v-btn type="submit" class="red white--text mb-2"
+                    <v-btn type="submit" class="red white--text mb-5"
                       >Sign-Up</v-btn
                     >
                   </v-flex></v-layout
                 >
                 <p>
-                  Already registered,<a @click="navToSignIn">Sign In</a> now.
+                  Already registered ,
+                  <a class="link" @click="navToSignIn">Sign In</a>
+                  now.
                 </p>
               </form>
             </v-col>
@@ -120,14 +119,29 @@ export default {
 
 <style scoped>
 .signup {
-  background-color: rgb(20, 20, 20);
-  color: #fff;
+  background-color: #fff;
+  color: #000;
 }
 .pm-signup-img {
   width: 100%;
   max-width: 500px;
+  margin: 0 auto;
 }
 .pm-signup-title {
   font-weight: 500;
+}
+.link {
+  text-decoration: none;
+  color: rgb(212, 41, 184) !important ;
+}
+@media (min-width: 768px) {
+  .signup {
+    padding: 80px;
+  }
+}
+@media (max-width: 768px) {
+  .pm-signup-img {
+    max-width: 285px;
+  }
 }
 </style>

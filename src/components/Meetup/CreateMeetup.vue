@@ -4,7 +4,7 @@
       <v-layout>
         <v-flex xs12>
           <div class="pm-create-meetup-heading mb-10">
-            <h1 class="create-title orange--text">Create a new meet-up</h1>
+            <h1 class="create-title blue--text">Create a new meet-up</h1>
           </div>
         </v-flex>
       </v-layout>
@@ -14,7 +14,7 @@
             <v-layout>
               <v-flex xs12 sm6 offset-sm3>
                 <v-text-field
-                  dark
+                  light
                   label="Title"
                   outlined
                   id="title"
@@ -26,7 +26,7 @@
             <v-layout>
               <v-flex xs12 sm6 offset-sm3>
                 <v-text-field
-                  dark
+                  light
                   label="Location"
                   outlined
                   id="location"
@@ -38,7 +38,7 @@
             <v-layout>
               <v-flex xs12 sm6 offset-sm3>
                 <v-text-field
-                  dark
+                  light
                   label="Image Url"
                   outlined
                   id="image-Url"
@@ -55,7 +55,7 @@
             <v-layout>
               <v-flex xs12 sm6 offset-sm3>
                 <v-textarea
-                  dark
+                  light
                   outlined
                   name="input-7-4"
                   label="Description"
@@ -80,7 +80,7 @@
                   <template v-slot:activator="{ on, attrs }">
                     <v-icon>fa-calendar-week</v-icon>
                     <v-text-field
-                      dark
+                      light
                       outlined
                       v-model="date"
                       label="Select the Date"
@@ -102,7 +102,7 @@
             </v-layout>
             <v-layout>
               <v-flex xs12 sm6 offset-sm3>
-                <v-btn type="submit" :disabled="!formIsValid" dark class="red"
+                <v-btn type="submit" :disabled="!formIsValid" light class="blue"
                   >Create Meet-up</v-btn
                 >
               </v-flex>
@@ -161,6 +161,6 @@ export default {
   font-weight: 400;
 }
 .pm-create-meetup {
-  background-color: rgb(20, 20, 20);
+  background-color: #fff;
 }
 </style>

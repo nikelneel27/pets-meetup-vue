@@ -8,8 +8,8 @@
             :src="meetup.imageUrl"
             height="450px"
           >
-            <v-card-title>{{ meetup.title }}</v-card-title></v-img
-          >
+            <v-card-title>{{ meetup.title }}</v-card-title>
+          </v-img>
           <v-card-subtitle>
             <div class="red--text">
               <h2>{{ meetup.date | date }}</h2>

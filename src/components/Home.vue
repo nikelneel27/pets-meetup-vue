@@ -43,11 +43,13 @@
         </v-carousel>
       </v-flex>
     </v-layout>
+    <OurCollections />
     <Sponsers />
   </v-container>
 </template>
 
 <script>
+import OurCollections from "./OurCollections";
 import Sponsers from "./Sponsers";
 export default {
   computed: {
@@ -69,6 +71,7 @@ export default {
   },
   components: {
     Sponsers,
+    OurCollections,
   },
 };
 </script>
